@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel para Cães e Gatos Cabrália — Hotel e Creche Pet · Lauro de Freitas</title>
+<meta name="description" content="Hotel e creche para cães e gatos em Vilas do Atlântico, Lauro de Freitas. Praia Pet exclusiva, natação canina com a dona e discoteca canina. Orgulho de ser Baiano.">
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --areia:#FAF3E3;
+  --branco:#FFFDF7;
+  --areia-2:#F1E7CF;
+  --texto:#17384A;
+  --suave:#48626F;
+  --azul:#0B6FA4;
+  --azul-forte:#0A5C86;
+  --azul-profundo:#0B4A66;
+  --ceu:#BFD9E4;
+  --marca:#29ABE2;
+  --linha:rgba(11,111,164,.22);
+  --linha-forte:rgba(11,111,164,.45);
+  --raio:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+html.js .reveal.visivel{opacity:1;transform:none}
+body{background:var(--areia);color:var(--texto);font-family:"Nunito",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.container{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+section{padding:96px 0}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;font-weight:700;line-height:1.15}
+h2{font-size:clamp(32px,4.4vw,48px);margin-bottom:16px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);margin-bottom:16px}
+.lead{color:var(--suave);max-width:680px;font-size:18px}
+.lead b{color:var(--texto)}
+:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:4px}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease;font-family:"Nunito",sans-serif}
+.btn:active{transform:scale(.98)}
+.btn.azul{background:var(--azul-forte);color:#fff}
+.btn.azul:hover{background:var(--azul-profundo)}
+.btn.contorno{border-color:var(--linha-forte);color:var(--azul-forte);background:transparent}
+.btn.contorno:hover{border-color:var(--azul)}
+.btn.claro{background:#fff;color:var(--azul-profundo)}
+.btn.claro:hover{background:var(--ceu)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- intro ---------- */
+#intro{position:fixed;inset:0;z-index:200;background:var(--areia);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;cursor:pointer;transition:opacity .5s ease}
+#intro.saiu{opacity:0;pointer-events:none}
+#intro img{width:min(320px,72vw);height:auto}
+#intro .sol{width:min(220px,50vw);height:4px;border-radius:99px;background:rgba(11,111,164,.15);overflow:hidden;position:relative}
+#intro .sol::after{content:"";position:absolute;inset:0;background:var(--marca);transform:scaleX(0);transform-origin:left;animation:nasce 1.3s ease forwards}
+@keyframes nasce{to{transform:scaleX(1)}}
+#intro p{font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--suave)}
+
+/* ---------- cabeçalho ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,243,227,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.barra .logo-topo{display:flex;align-items:center;flex:none}
+.barra .logo-topo img{height:46px;width:auto}
+nav.principal{display:flex;gap:28px}
+nav.principal a{text-decoration:none;font-size:15px;font-weight:700;color:var(--suave);transition:color .18s}
+nav.principal a:hover{color:var(--azul-forte)}
+.barra .btn{padding:11px 22px;font-size:15px}
+#menuBtn{display:none;background:none;border:1px solid var(--linha-forte);color:var(--azul-forte);border-radius:10px;padding:10px 18px;font:700 15px "Nunito",sans-serif;cursor:pointer}
+
+/* ---------- hero ---------- */
+#inicio{padding:160px 0 96px;text-align:center;background:radial-gradient(ellipse 90% 55% at 50% -8%,#DFF0F7 0%,var(--areia) 62%)}
+#inicio .logo-hero{width:min(430px,84vw);margin:0 auto 4px}
+#inicio h1{font-size:clamp(36px,5.6vw,58px);color:var(--azul-profundo);max-width:820px;margin:18px auto 14px}
+#inicio .sub{color:var(--suave);font-size:19px;max-width:640px;margin:0 auto 28px}
+.fatos{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px}
+.fato{border:1px solid var(--linha);border-radius:999px;padding:9px 20px;font-size:14.5px;font-weight:700;color:var(--texto);background:var(--branco)}
+.fato b{color:var(--azul-forte);font-weight:800}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:56px}
+
+/* moldura limpa de clube de praia */
+.moldura{background:var(--branco);border:1px solid var(--linha);border-radius:20px;padding:10px;box-shadow:0 14px 34px rgba(23,56,74,.10)}
+.moldura video,.moldura img{width:100%;height:100%;object-fit:cover;border-radius:12px;background:#0B4A66}
+.hero-video{max-width:400px;margin-inline:auto}
+.hero-video video{aspect-ratio:9/16}
+.legenda{margin-top:16px;color:var(--suave);font-size:15px;text-align:center}
+.som-btn{margin-top:12px;background:none;border:1px solid var(--linha-forte);color:var(--azul-forte);border-radius:999px;padding:9px 22px;font:700 14.5px "Nunito",sans-serif;cursor:pointer}
+.som-btn:hover{border-color:var(--azul)}
+
+/* ---------- seções claras ---------- */
+.fundo-branco{background:var(--branco);border-block:1px solid var(--linha)}
+.grade-videos{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;align-items:start}
+.cartao-video{max-width:400px;margin-inline:auto;width:100%}
+.cartao-video video{aspect-ratio:9/16}
+.cartao-video h3{font-size:24px;margin:20px 0 6px;text-align:center}
+.cartao-video p{color:var(--suave);font-size:16px;text-align:center;max-width:400px;margin-inline:auto}
+.moldura.contida{max-width:320px;margin-inline:auto;width:100%}
+.moldura.contida video{aspect-ratio:9/16}
+
+/* ---------- hospedagem ---------- */
+.duas-colunas{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px}
+.pontos{list-style:none;display:grid;gap:22px;margin-top:28px}
+.pontos li{display:flex;gap:16px;align-items:flex-start;font-size:18px}
+.pontos li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--marca);flex:none;margin-top:9px}
+.pontos li span{color:var(--suave);display:block;font-size:16px}
+.gatil h3{font-size:28px;margin-bottom:10px}
+.gatil p{color:var(--suave);margin-bottom:24px}
+
+/* ---------- creche ---------- */
+.fato-grande{display:inline-flex;align-items:center;gap:10px;background:var(--areia-2);border:1px solid var(--linha);border-radius:999px;padding:10px 22px;font-weight:800;color:var(--azul-profundo);margin-top:28px}
+.fotos-dupla{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.fotos-dupla figure{max-width:480px;margin-inline:auto;width:100%}
+.fotos-dupla .moldura img{aspect-ratio:9/16;object-fit:cover}
+
+/* ---------- natação (faixa azul) ---------- */
+#natacao{background:var(--azul-profundo);color:#fff}
+#natacao .kicker{color:var(--ceu)}
+#natacao .lead{color:var(--ceu)}
+#natacao .lead b{color:#fff}
+#natacao .moldura{background:rgba(255,255,255,.06);border-color:rgba(191,217,228,.35);box-shadow:none}
+#natacao .legenda{color:var(--ceu)}
+.natacao-grade{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;margin-top:16px}
+
+/* ---------- família ---------- */
+.familia-grade{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;align-items:start}
+.pessoa{max-width:400px;margin-inline:auto;width:100%}
+.pessoa video{aspect-ratio:9/16}
+.pessoa h3{font-size:25px;margin:20px 0 6px;text-align:center}
+.pessoa p{color:var(--suave);font-size:16px;text-align:center}
+.retorno{margin-top:56px;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio);padding:36px;display:grid;grid-template-columns:400px 1fr;gap:40px;align-items:center}
+.retorno .moldura{box-shadow:none}
+.retorno video{aspect-ratio:9/16}
+.retorno h3{font-size:30px;margin-bottom:12px}
+.retorno p{color:var(--suave);font-size:17.5px}
+.retorno p b{color:var(--texto)}
+.retorno p+p{margin-top:12px}
+.natasha{margin-top:48px;display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center}
+.natasha h3{font-size:28px;margin-bottom:10px}
+.natasha p{color:var(--suave);font-size:17.5px}
+
+/* ---------- festas ---------- */
+.festas-grade{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;align-items:start}
+.destaque-festa{background:var(--areia);border:1px solid var(--linha-forte);border-radius:var(--raio);padding:36px;grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.destaque-festa h3{font-size:30px;margin-bottom:10px}
+.destaque-festa p{color:var(--suave);max-width:620px}
+.destaque-festa .quando{font-weight:800;color:var(--azul-forte);letter-spacing:.04em;text-transform:uppercase;font-size:14px;margin-bottom:10px}
+
+/* ---------- montador ---------- */
+.montador{background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio);padding:32px;margin-top:48px;box-shadow:0 14px 34px rgba(23,56,74,.08)}
+.montador h3{font-size:30px;margin-bottom:8px}
+.montador>p{color:var(--suave);margin-bottom:28px}
+.campo{margin-bottom:28px}
+.campo>span{display:block;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--azul);margin-bottom:12px}
+.opcoes{display:flex;flex-wrap:wrap;gap:10px}
+.opcao{border:1px solid var(--linha-forte);background:transparent;color:var(--texto);border-radius:12px;padding:11px 18px;font:700 15px "Nunito",sans-serif;cursor:pointer;transition:all .18s}
+.opcao:hover{border-color:var(--azul)}
+.opcao[aria-pressed="true"]{background:var(--azul-forte);color:#fff;border-color:transparent}
+.campo.desligado{opacity:.38;pointer-events:none}
+.entradas{display:flex;gap:16px;flex-wrap:wrap}
+.entrada{flex:1;min-width:170px}
+.entrada label{display:block;font-size:14px;color:var(--suave);margin-bottom:8px;font-weight:700}
+.entrada input{width:100%;background:var(--areia);color:var(--texto);border:1px solid var(--linha-forte);border-radius:12px;padding:13px 14px;font:600 16px "Nunito",sans-serif}
+.mensagem{background:var(--areia);border:1px dashed var(--linha-forte);border-radius:12px;padding:18px 20px;font-size:15.5px;color:var(--texto);margin-bottom:20px;white-space:pre-line}
+.taxidog{margin-top:24px;color:var(--suave);font-size:16px}
+.taxidog b{color:var(--texto)}
+
+/* ---------- visite ---------- */
+.visita-grade{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:16px}
+.visita-grade .endereco{font-size:20px;line-height:1.5}
+.visita-grade .endereco b{color:var(--azul-profundo)}
+.visita-grade .horario{color:var(--suave);margin-top:14px;font-size:17px}
+.visita-botoes{display:flex;flex-wrap:wrap;gap:16px}
+
+/* ---------- rodapé ---------- */
+footer{background:var(--azul-profundo);color:#fff;padding:64px 0 48px;text-align:center}
+footer .logo-caixa{display:inline-block;background:#fff;border-radius:14px;padding:14px 22px;margin-bottom:28px}
+footer .logo-caixa img{height:64px;width:auto}
+.contatos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:28px}
+footer .btn.contorno{border-color:rgba(191,217,228,.5);color:#fff}
+footer .btn.contorno:hover{border-color:#fff}
+footer small{color:var(--ceu);font-size:14px}
+
+/* WhatsApp flutuante */
+.wa-flutuante{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;background:var(--azul-forte);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(11,74,102,.45);text-decoration:none}
+.wa-flutuante svg{width:29px;height:29px;fill:#fff}
+
+/* ---------- responsivo ---------- */
+@media (max-width:900px){
+  .grade-videos,.duas-colunas,.fotos-dupla,.familia-grade,.festas-grade,.visita-grade{grid-template-columns:1fr}
+  .natacao-grade{grid-template-columns:1fr}
+  .retorno{grid-template-columns:1fr;padding:28px}
+  .natasha{grid-template-columns:1fr}
+  .destaque-festa{grid-template-columns:1fr}
+  .retorno .moldura{max-width:400px;margin-inline:auto;width:100%}
+}
+@media (max-width:768px){
+  section{padding:72px 0}
+  #inicio{padding-top:140px}
+  nav.principal{display:none;position:absolute;top:72px;left:0;right:0;background:rgba(250,243,227,.98);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--linha)}
+  nav.principal.aberto{display:flex}
+  #menuBtn{display:block}
+  .barra .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important}
+  html.js .reveal{opacity:1;transform:none}
+}
+</style>
+<noscript><style>#intro{display:none}</style></noscript>
+</head>
+<body>
+
+<div id="intro" role="button" aria-label="Pular introdução" tabindex="0">
+  <img src="media/logo.png" alt="Hotel para Cães e Gatos Cabrália">
+  <div class="sol" aria-hidden="true"></div>
+  <p>Toque para entrar</p>
+</div>
+
+<header>
+  <div class="container barra">
+    <a class="logo-topo" href="#inicio" aria-label="Hotel para Cães e Gatos Cabrália — início"><img src="media/logo.png" alt="Hotel para Cães e Gatos Cabrália"></a>
+    <button id="menuBtn" aria-expanded="false" aria-controls="menuPrincipal">Menu</button>
+    <nav class="principal" id="menuPrincipal" aria-label="Navegação principal">
+      <a href="#atracoes">Atrações</a>
+      <a href="#hospedagem">Hospedagem</a>
+      <a href="#creche">Creche</a>
+      <a href="#natacao">Natação</a>
+      <a href="#familia">A família</a>
+      <a href="#festas">Feriadões</a>
+      <a href="#reservas">Reservas</a>
+    </nav>
+    <a class="btn azul" href="https://wa.me/5571999374215" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section id="inicio">
+  <div class="container">
+    <img class="logo-hero reveal" src="media/logo.png" alt="Hotel para Cães e Gatos Cabrália — logo oficial">
+    <h1 class="reveal">Orgulho de ser Baiano</h1>
+    <p class="sub reveal">Hotel e creche para cães e gatos onde o seu pet passa o dia na praia — a nossa Praia Pet — e descansa como hóspede cinco estrelas.</p>
+    <div class="fatos reveal">
+      <span class="fato"><b>12 anos</b> de experiência</span>
+      <span class="fato">Nota <b>4,9</b> no Google · 68 avaliações</span>
+      <span class="fato">Vilas do Atlântico · <b>Lauro de Freitas</b></span>
+    </div>
+    <div class="ctas reveal">
+      <a class="btn azul" href="https://wa.me/5571999374215" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+        Reservar no WhatsApp
+      </a>
+      <a class="btn contorno" href="https://www.instagram.com/hotelparacaessalvadorbahia/" target="_blank" rel="noopener">Instagram da casa</a>
+    </div>
+    <figure class="reveal">
+      <div class="moldura hero-video">
+        <video id="videoHero" src="media/02-feriadao-estrutura.mp4" poster="media/posters/02-feriadao-estrutura.jpg" autoplay muted loop playsinline preload="metadata" data-ambiente aria-label="Vídeo: um feriadão no Hotel Cabrália — Praia Pet, piscina, discoteca e descanso"></video>
+      </div>
+      <figcaption class="legenda">Um feriadão aqui dentro: Praia Pet, piscina, discoteca e descanso — assista com som.</figcaption>
+      <button class="som-btn" id="somBtn" type="button" aria-pressed="false">Ouvir com som</button>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= ATRAÇÕES ================= -->
+<section id="atracoes" class="fundo-branco">
+  <div class="container">
+    <p class="kicker reveal">As atrações</p>
+    <h2 class="reveal">“Meu pequeno paraíso”</h2>
+    <p class="lead reveal">É assim que a <b>Sofia</b>, a dona da casa, chama esse lugar. Hospedamos cães de pequeno, médio e grande porte e gatos, no <b>padrão cinco estrelas</b> — e, nas áreas de brincadeira, a turma é separada por porte: <b>cães pequenos somente com pequenos; médios, com grandes</b>.</p>
+    <div class="grade-videos">
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/10-praia-pet-spa.mp4" poster="media/posters/10-praia-pet-spa.jpg" controls preload="none" playsinline aria-label="Vídeo: cães brincando na Praia Pet de areia do Hotel Cabrália"></video>
+        </div>
+        <h3>Praia Pet exclusiva</h3>
+        <p>Areia de verdade, agility, túneis, escorregador, piscina de bolinhas e guarda-sol: a nossa praia particular, exclusividade na Bahia.</p>
+      </article>
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/14-drone-estrutura.mp4" poster="media/posters/14-drone-estrutura.jpg" controls preload="none" playsinline aria-label="Vídeo: especial do Dia das Crianças Pet — Praia Pet, discoteca canina e natação"></video>
+        </div>
+        <h3>Três atrações num dia só</h3>
+        <p>No especial do Dia das Crianças Pet, a casa inteira vira festa: Praia Pet, discoteca canina e natação no mesmo dia.</p>
+      </article>
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/03-halloween-praia.mp4" poster="media/posters/03-halloween-praia.jpg" controls preload="none" playsinline aria-label="Vídeo: festa de Halloween, Praia Pet ao sol e Sofia na piscina com um Spitz"></video>
+        </div>
+        <h3>Sol, festa e piscina</h3>
+        <p>Da festa de Halloween à beira da piscina: aqui, todo dia tem motivo pra brincar — e a Sofia entra na água junto.</p>
+      </article>
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/08-feriadao-independencia.mp4" poster="media/posters/08-feriadao-independencia.jpg" controls preload="none" playsinline aria-label="Vídeo: cães pequenos no pátio coberto e na Praia Pet, no feriadão da Independência"></video>
+        </div>
+        <h3>A turma dos pequenos</h3>
+        <p>Os pequenos aproveitam no ritmo deles: pátio coberto enfeitado, Praia Pet e muita brincadeira entre amigos do mesmo tamanho.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOSPEDAGEM ================= -->
+<section id="hospedagem">
+  <div class="container">
+    <p class="kicker reveal">Hospedagem</p>
+    <h2 class="reveal">Dormir fora, se sentindo em casa</h2>
+    <p class="lead reveal">Você viaja tranquilo: aqui, o seu pet não fica preso — ele vira hóspede, com dia de praia e noite de descanso de verdade.</p>
+    <div class="duas-colunas">
+      <div class="reveal">
+        <h3 style="font-size:28px">Para os cães</h3>
+        <ul class="pontos">
+          <li><div>Salas amplas, com sofás e camas<span>Nada de “celas”: os cães descansam soltos, em salas amplas, nas caminhas elevadas.</span></div></li>
+          <li><div>Monitoramento 24h<span>A nossa equipe acompanha os hóspedes dia e noite.</span></div></li>
+          <li><div>Ração inclusa<span>Royal Canin Super Premium servida durante a hospedagem.</span></div></li>
+          <li><div>Saúde conferida na chegada<span>Cães e gatos passam por avaliação de saúde ao chegar.</span></div></li>
+        </ul>
+      </div>
+      <div class="gatil reveal">
+        <h3>E os gatos têm o cantinho deles</h3>
+        <p>O gatil é separado e climatizado, com casinhas, prateleiras, arranhadores e brinquedos. Nas palavras da casa: conforto, limpeza, segurança e carinho.</p>
+        <figure>
+          <div class="moldura">
+            <video src="media/07-tour-gatil.mp4" poster="media/posters/07-tour-gatil.jpg" controls preload="none" playsinline aria-label="Vídeo: tour pelo hotel de gatos — quarto climatizado com camas, casinha e arranhadores"></video>
+          </div>
+          <figcaption class="legenda">Um tour pelo hotel dos gatos, em Vilas do Atlântico.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CRECHE ================= -->
+<section id="creche" class="fundo-branco">
+  <div class="container">
+    <p class="kicker reveal">Creche · Day care</p>
+    <h2 class="reveal">O dia inteiro brincando, a noite em casa</h2>
+    <p class="lead reveal">Na nossa creche, o <b>day care é 100% solto</b>: o seu cão chega de manhã, passa o dia entre a Praia Pet, a piscina e a turma — e volta pra casa cansado e feliz.</p>
+    <span class="fato-grande reveal">Creche das 07h às 19h</span>
+    <div class="fotos-dupla">
+      <figure class="reveal">
+        <div class="moldura"><img src="media/creche-1.jpg" alt="Cães pequenos brincando soltos na areia da Praia Pet, entre o guarda-sol e o túnel" loading="lazy"></div>
+        <figcaption class="legenda">A turma solta na Praia Pet, o dia inteiro.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <div class="moldura"><img src="media/creche-2.jpg" alt="Cães pequenos na área coberta do hotel, entre as caminhas elevadas, com a Natasha" loading="lazy"></div>
+        <figcaption class="legenda">Na área coberta, as caminhas esperam a hora do descanso.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NATAÇÃO ================= -->
+<section id="natacao">
+  <div class="container">
+    <div class="natacao-grade">
+      <div class="reveal">
+        <p class="kicker">Natação canina</p>
+        <h2>Quem nada aqui, nada com a dona</h2>
+        <p class="lead">A natação canina tem sempre a presença da <b>Sofia Duarte</b>, sócia-proprietária da casa, que realiza esta atividade com muita emoção. Este é um <b>diferencial</b> nosso em relação à concorrência aqui na Bahia.</p>
+      </div>
+      <figure class="reveal">
+        <div class="moldura">
+          <video src="media/01-natacao.mp4" poster="media/posters/01-natacao.jpg" controls preload="none" playsinline aria-label="Vídeo: Sofia nadando com um Pastor de Shetland na piscina do Hotel Cabrália"></video>
+        </div>
+        <figcaption class="legenda">A Sofia na piscina com os hóspedes — do jeitinho que acontece aqui.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAMÍLIA ================= -->
+<section id="familia">
+  <div class="container">
+    <p class="kicker reveal">A família Cabrália</p>
+    <h2 class="reveal">Uma empresa de família, de verdade</h2>
+    <p class="lead reveal">Quem recebe o seu pet é a nossa família — a Sofia, o Duarte e a Natasha. Conheça quem cuida de quem você ama:</p>
+    <div class="familia-grade">
+      <article class="pessoa reveal">
+        <div class="moldura">
+          <video src="media/04-institucional-sofia.mp4" poster="media/posters/04-institucional-sofia.jpg" controls preload="none" playsinline aria-label="Vídeo: Sofia apresentando o Hotel Cabrália, cercada de cães na Praia Pet"></video>
+        </div>
+        <h3>Sofia Duarte</h3>
+        <p>Sócia-proprietária e consultora felina, é o rosto da casa: recebe, brinca, nada junto e cuida dos gatos como ninguém.</p>
+      </article>
+      <article class="pessoa reveal">
+        <div class="moldura">
+          <video src="media/05-institucional-duarte.mp4" poster="media/posters/05-institucional-duarte.jpg" controls preload="none" playsinline aria-label="Vídeo: Duarte falando de comportamento canino e brincando com cães grandes na grama"></video>
+        </div>
+        <h3>Luiz Duarte, o Duarte</h3>
+        <p>Sócio-proprietário, adestrador e terapeuta comportamental canino — o “Professor de Cães”. Adestramento é sob orçamento, direto com ele.</p>
+      </article>
+    </div>
+
+    <div class="retorno reveal">
+      <div class="moldura">
+        <video src="media/06-retorno.mp4" poster="media/posters/06-retorno.jpg" controls preload="none" playsinline aria-label="Vídeo: Sofia e Duarte anunciando a volta do Hotel Cabrália a Lauro de Freitas"></video>
+      </div>
+      <div>
+        <h3>A nossa volta</h3>
+        <p>Em 2025, depois de uma temporada em <b>Porto Alegre/RS</b>, voltamos para Lauro de Freitas — e o anúncio da volta foi o <b>post mais celebrado</b> pelos nossos clientes.</p>
+        <p>É como a gente diz: <b>“um sonho iniciado em 2014 e que se mantém vivo graças aos nossos clientes e amigos”</b>.</p>
+      </div>
+    </div>
+
+    <div class="natasha reveal">
+      <figure>
+        <div class="moldura contida">
+          <video src="media/13-familia-reabertura.mp4" poster="media/posters/13-familia-reabertura.jpg" controls preload="none" playsinline aria-label="Vídeo: a família Cabrália reunida com os cães na reabertura da casa"></video>
+        </div>
+        <figcaption class="legenda">A família reunida na reabertura da casa.</figcaption>
+      </figure>
+      <div>
+        <h3>Natasha Duarte</h3>
+        <p>“A menor monitora canina do mundo” — é assim que a gente apresenta a nossa filha, que cresceu entre os hóspedes e aparece em quase todos os vídeos da casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FESTAS ================= -->
+<section id="festas" class="fundo-branco">
+  <div class="container">
+    <p class="kicker reveal">Feriadões e festas</p>
+    <h2 class="reveal">Todo feriadão vira festa</h2>
+    <p class="lead reveal">Feriado chegando, a casa se enfeita — e as vagas voam: são sempre <b>limitadas</b>, e a reserva é só pelo WhatsApp.</p>
+    <div class="festas-grade">
+      <div class="destaque-festa reveal">
+        <div>
+          <p class="quando">Campanha do momento · 19 a 23 de novembro</p>
+          <h3>Feriadão da Consciência Negra</h3>
+          <p>Praia Pet, natação e discoteca no pacote do feriadão — o vídeo no topo desta página foi gravado aqui dentro, num feriadão como esse. Garanta a vaga do seu pet antes que acabe.</p>
+        </div>
+        <a class="btn azul" href="#reservas">Reservar a vaga</a>
+      </div>
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/09-cao-folia.mp4" poster="media/posters/09-cao-folia.jpg" controls preload="none" playsinline aria-label="Vídeo: Cão Folia — o Carnaval do Hotel Cabrália, com discoteca, natação e Praia Pet"></video>
+        </div>
+        <h3>Cão Folia</h3>
+        <p>O nosso Carnaval tem nome: Cão Folia, com discoteca, natação e a Praia Pet cheia de foliões de quatro patas.</p>
+      </article>
+      <article class="cartao-video reveal">
+        <div class="moldura">
+          <video src="media/12-natal-reveillon.mp4" poster="media/posters/12-natal-reveillon.jpg" controls preload="none" playsinline aria-label="Vídeo: cães brincando na Praia Pet nas festas de Natal e Réveillon"></video>
+        </div>
+        <h3>Natal e Réveillon</h3>
+        <p>Nas festas de fim de ano, enquanto você viaja, o seu pet festeja com a gente — com a mesma rotina de praia e brincadeira.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVAS ================= -->
+<section id="reservas">
+  <div class="container">
+    <p class="kicker reveal">Reservas</p>
+    <h2 class="reveal">Monte a reserva do seu pet</h2>
+    <p class="lead reveal">Escolha o serviço, conte pra gente quem é o hóspede e quando ele vem. O botão abre o nosso WhatsApp com a mensagem prontinha — valores e disponibilidade a gente confirma na conversa.</p>
+
+    <div class="montador reveal">
+      <h3>Sua reserva, passo a passo</h3>
+      <p>Leva menos de um minuto — e cai direto no nosso WhatsApp.</p>
+      <div class="campo">
+        <span id="rotServico">Serviço</span>
+        <div class="opcoes" role="group" aria-labelledby="rotServico" id="servicos">
+          <button class="opcao" type="button" data-servico="Hospedagem" aria-pressed="true">Hospedagem</button>
+          <button class="opcao" type="button" data-servico="Creche (day care)" aria-pressed="false">Creche · day care</button>
+        </div>
+      </div>
+      <div class="campo">
+        <span id="rotPet">Quem é o hóspede?</span>
+        <div class="opcoes" role="group" aria-labelledby="rotPet" id="tipos">
+          <button class="opcao" type="button" data-pet="cão" aria-pressed="true">Cão</button>
+          <button class="opcao" type="button" data-pet="gato" aria-pressed="false">Gato</button>
+        </div>
+      </div>
+      <div class="campo" id="campoPorte">
+        <span id="rotPorte">Porte do cão</span>
+        <div class="opcoes" role="group" aria-labelledby="rotPorte" id="portes">
+          <button class="opcao" type="button" data-porte="pequeno" aria-pressed="false">Pequeno</button>
+          <button class="opcao" type="button" data-porte="médio" aria-pressed="true">Médio</button>
+          <button class="opcao" type="button" data-porte="grande" aria-pressed="false">Grande</button>
+        </div>
+      </div>
+      <div class="campo">
+        <span>Nome do pet (se quiser contar)</span>
+        <div class="entradas">
+          <div class="entrada">
+            <label for="nomePet">Nome do pet</label>
+            <input type="text" id="nomePet" placeholder="Ex.: Thor, Mel, Luna..." autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="campo">
+        <span>Quando?</span>
+        <div class="entradas">
+          <div class="entrada">
+            <label for="dataEntrada" id="rotEntrada">Dia da entrada</label>
+            <input type="date" id="dataEntrada">
+          </div>
+          <div class="entrada" id="campoSaida">
+            <label for="dataSaida">Dia da saída</label>
+            <input type="date" id="dataSaida">
+          </div>
+        </div>
+      </div>
+      <p class="mensagem" id="mensagemPronta" aria-live="polite"></p>
+      <a class="btn azul" id="enviarReserva" href="https://wa.me/5571999374215" target="_blank" rel="noopener">Enviar a reserva no WhatsApp</a>
+      <p class="taxidog">Precisa de leva e traz? Temos <b>Taxi Dog</b> — é só combinar com a gente na mesma conversa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISITE-NOS ================= -->
+<section id="visite" class="fundo-branco">
+  <div class="container">
+    <p class="kicker reveal">Visite-nos</p>
+    <h2 class="reveal">Passa aqui pra conhecer</h2>
+    <div class="visita-grade">
+      <div class="reveal">
+        <p class="endereco"><b>Av. Praia de Itamaracá, Lote 21, Quadra 25</b><br>Vilas do Atlântico · Lauro de Freitas · Bahia</p>
+        <p class="horario">Atendimento: segunda a sábado, das 8h às 18h.</p>
+      </div>
+      <div class="visita-botoes reveal">
+        <a class="btn azul" href="https://wa.me/5571999374215" target="_blank" rel="noopener">WhatsApp · (71) 99937-4215</a>
+        <a class="btn contorno" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+para+C%C3%A3es+e+Gatos+Cabr%C3%A1lia,+Vilas+do+Atl%C3%A2ntico,+Lauro+de+Freitas" target="_blank" rel="noopener">Como chegar</a>
+        <a class="btn contorno" href="https://www.instagram.com/hotelparacaessalvadorbahia/" target="_blank" rel="noopener">Instagram · @hotelparacaessalvadorbahia</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contato">
+  <div class="container">
+    <div class="logo-caixa"><img src="media/logo.png" alt="Hotel para Cães e Gatos Cabrália"></div>
+    <div class="contatos">
+      <a class="btn claro" href="https://wa.me/5571999374215" target="_blank" rel="noopener">WhatsApp · (71) 99937-4215</a>
+      <a class="btn contorno" href="https://www.instagram.com/hotelparacaessalvadorbahia/" target="_blank" rel="noopener">Instagram · @hotelparacaessalvadorbahia</a>
+    </div>
+    <small>© <span id="ano">2026</span> Hotel para Cães e Gatos Cabrália — Vilas do Atlântico, Lauro de Freitas, Bahia</small>
+  </div>
+</footer>
+
+<a class="wa-flutuante" href="https://wa.me/5571999374215" target="_blank" rel="noopener" aria-label="Falar no WhatsApp do Hotel Cabrália">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+  document.documentElement.classList.add("js");
+  var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- intro ---------- */
+  var intro = document.getElementById("intro");
+  var introFechada = false;
+  function fecharIntro(){
+    if(introFechada || !intro) return;
+    introFechada = true;
+    intro.classList.add("saiu");
+    setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 600);
+  }
+  if(intro){
+    if(reduz){ fecharIntro(); }
+    else{
+      setTimeout(fecharIntro, 1600);
+      intro.addEventListener("click", fecharIntro);
+      intro.addEventListener("keydown", function(e){ if(e.key === "Enter" || e.key === " "){ e.preventDefault(); fecharIntro(); } });
+    }
+  }
+
+  /* ---------- menu mobile ---------- */
+  var menuBtn = document.getElementById("menuBtn");
+  var menu = document.getElementById("menuPrincipal");
+  if(menuBtn && menu){
+    menuBtn.addEventListener("click", function(){
+      var aberto = menu.classList.toggle("aberto");
+      menuBtn.setAttribute("aria-expanded", aberto ? "true" : "false");
+    });
+    menu.addEventListener("click", function(e){
+      if(e.target.tagName === "A"){ menu.classList.remove("aberto"); menuBtn.setAttribute("aria-expanded","false"); }
+    });
+  }
+
+  /* ---------- reveal ---------- */
+  var revelar = document.querySelectorAll(".reveal");
+  function mostrarTudo(){ revelar.forEach(function(el){ el.classList.add("visivel"); }); }
+  if("IntersectionObserver" in window && !reduz){
+    var io = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("visivel"); io.unobserve(en.target); }
+      });
+    }, {threshold: 0.12});
+    revelar.forEach(function(el){ io.observe(el); });
+    setTimeout(mostrarTudo, 3000); /* trava de segurança */
+  } else { mostrarTudo(); }
+
+  /* ---------- vídeos: pausar fora da tela ---------- */
+  if("IntersectionObserver" in window){
+    var ioVideo = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        var v = en.target;
+        if(en.intersectionRatio < 0.25){
+          if(!v.paused) v.pause();
+        } else if(v.hasAttribute("data-ambiente") && v.muted && v.paused && !reduz){
+          v.play().catch(function(){});
+        }
+      });
+    }, {threshold: [0, 0.25, 0.5]});
+    document.querySelectorAll("video").forEach(function(v){ ioVideo.observe(v); });
+  }
+
+  /* ---------- hero: ouvir com som ---------- */
+  var hero = document.getElementById("videoHero");
+  var somBtn = document.getElementById("somBtn");
+  if(hero && somBtn){
+    somBtn.addEventListener("click", function(){
+      var comSom = hero.muted;
+      hero.muted = !comSom;
+      if(comSom){
+        hero.removeAttribute("data-ambiente");
+        hero.loop = false;
+        hero.setAttribute("controls", "");
+        hero.play().catch(function(){});
+        somBtn.textContent = "Silenciar";
+        somBtn.setAttribute("aria-pressed", "true");
+      } else {
+        somBtn.textContent = "Ouvir com som";
+        somBtn.setAttribute("aria-pressed", "false");
+      }
+    });
+  }
+
+  /* ---------- montador de reservas ---------- */
+  var WA = "https://wa.me/5571999374215";
+  var servicoAtual = "Hospedagem";
+  var petAtual = "cão";
+  var porteAtual = "médio";
+  var campoPorte = document.getElementById("campoPorte");
+  var campoSaida = document.getElementById("campoSaida");
+  var rotEntrada = document.getElementById("rotEntrada");
+  var nomeEl = document.getElementById("nomePet");
+  var entradaEl = document.getElementById("dataEntrada");
+  var saidaEl = document.getElementById("dataSaida");
+  var msgEl = document.getElementById("mensagemPronta");
+  var enviarEl = document.getElementById("enviarReserva");
+
+  function formatarData(valor){
+    if(!valor) return null;
+    var p = valor.split("-");
+    if(p.length !== 3) return null;
+    return p[2] + "/" + p[1] + "/" + p[0];
+  }
+  function montar(){
+    var linhas = ["Olá! Vim pelo site do Hotel Cabrália e quero fazer uma reserva."];
+    linhas.push("Serviço: " + servicoAtual + ".");
+    var pet = "Pet: " + petAtual;
+    if(petAtual === "cão") pet += " (porte " + porteAtual + ")";
+    var nome = nomeEl.value.trim();
+    if(nome) pet += " — nome: " + nome;
+    linhas.push(pet + ".");
+    var entrada = formatarData(entradaEl.value);
+    if(servicoAtual === "Creche (day care)"){
+      linhas.push(entrada ? ("A partir de: " + entrada + ".") : "Início: a combinar.");
+    } else {
+      var saida = formatarData(saidaEl.value);
+      linhas.push("Entrada: " + (entrada || "a combinar") + ".");
+      linhas.push("Saída: " + (saida || "a combinar") + ".");
+    }
+    var texto = linhas.join("\n");
+    msgEl.textContent = texto;
+    enviarEl.href = WA + "?text=" + encodeURIComponent(texto);
+  }
+  function grupo(id, cb){
+    var box = document.getElementById(id);
+    if(!box) return;
+    box.querySelectorAll(".opcao").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        box.querySelectorAll(".opcao").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+        btn.setAttribute("aria-pressed", "true");
+        cb(btn);
+        montar();
+      });
+    });
+  }
+  grupo("servicos", function(btn){
+    servicoAtual = btn.getAttribute("data-servico");
+    var creche = servicoAtual === "Creche (day care)";
+    campoSaida.classList.toggle("desligado", creche);
+    campoSaida.style.display = creche ? "none" : "";
+    rotEntrada.textContent = creche ? "A partir de que dia?" : "Dia da entrada";
+  });
+  grupo("tipos", function(btn){
+    petAtual = btn.getAttribute("data-pet");
+    campoPorte.classList.toggle("desligado", petAtual !== "cão");
+  });
+  grupo("portes", function(btn){ porteAtual = btn.getAttribute("data-porte"); });
+  nomeEl.addEventListener("input", montar);
+  entradaEl.addEventListener("change", montar);
+  saidaEl.addEventListener("change", montar);
+  montar();
+
+  /* ---------- ano do rodapé ---------- */
+  document.getElementById("ano").textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
